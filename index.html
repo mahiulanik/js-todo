@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <h2>To-Do List <img src="images/logo.png" /></h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add Tasks..." />
+          <button onclick="addTask()">Add</button>
+        </div>
+
+        <h3>Active Tasks (<span id="active-count">0</span>)</h3>
+        <ul id="active-list"></ul>
+        <h3>Completed Tasks (<span id="completed-count">0</span>)</h3>
+        <ul id="completed-list"></ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
