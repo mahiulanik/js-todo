@@ -129,3 +129,19 @@ h3 {
 .empty-msg::before {
   display: none !important;
 }
+
+@media (max-width: 480px) {
+  .container {
+    padding: 8px;
+  }
+
+  .todo-app {
+    margin: 20px auto 20px;
+    padding: 24px 16px 40px;
+  }
+
+  button {
+    padding: 14px 20px;
+    font-size: 15px;
+  }
+}
