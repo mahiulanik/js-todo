@@ -35,13 +35,29 @@ inputBox.addEventListener("keydown", function (e) {
 });
 
 function updateCounter() {
-  const activeTasks = activeList.querySelectorAll("li");
-
-  const completedTasks = completedList.querySelectorAll("li");
+  const activeTasks = activeList.querySelectorAll("li:not(.empty-msg)");
+  const completedTasks = completedList.querySelectorAll("li:not(.empty-msg)");
 
   activeCount.innerHTML = activeTasks.length;
-
   completedCount.innerHTML = completedTasks.length;
+
+  // Active list
+  if (activeTasks.length === 0) {
+    activeList.innerHTML =
+      '<li class="empty-msg">No tasks yet — add one above!</li>';
+  } else {
+    const existingMsg = activeList.querySelector(".empty-msg");
+    if (existingMsg) existingMsg.remove();
+  }
+
+  // Completed list
+  if (completedTasks.length === 0) {
+    completedList.innerHTML =
+      '<li class="empty-msg">No completed tasks yet</li>';
+  } else {
+    const existingMsg = completedList.querySelector(".empty-msg");
+    if (existingMsg) existingMsg.remove();
+  }
 }
 
 document.addEventListener("click", function (e) {

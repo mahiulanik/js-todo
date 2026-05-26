@@ -89,7 +89,6 @@ ul li::before {
 
 ul li.checked {
   color: #555;
-  /* text-decoration: line-through; */
 }
 ul li.checked::before {
   background-image: url(images/checked-tick.png);
@@ -115,4 +114,18 @@ ul li span:hover {
 h3 {
   margin: 15px 0;
   color: #002765;
+}
+
+.empty-msg {
+  font-size: 14px;
+  color: #898888;
+  text-align: left;
+  padding: 18px 8px 18px 50px !important;
+  cursor: default !important;
+  pointer-events: none;
+  font-style: italic;
+}
+
+.empty-msg::before {
+  display: none !important;
 }
